@@ -2,29 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- 手機裝置自適應 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- (無 RWD) 不放 viewport 或用固定寬度 -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+    <!-- 如果你想手機一進來就顯示1200px寬，可以寫這行 (擇一即可) -->
+    <!-- <meta name="viewport" content="width=1200" /> -->
+
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Shop Homepage - Desktop Only</title>
 
-    <!-- Favicon (可自行調整) -->
+    <!-- Favicon (可自行調) -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <!-- Bootstrap 5 核心 CSS (CDN) -->
+    <!-- Bootstrap CSS (CDN) -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Bootstrap Icons (如需要) -->
+    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
       rel="stylesheet"
     />
 
-    <!-- 你的自訂 CSS (如果有) -->
-    <!-- 下面這行是「模板提供的 CSS」，若你真的有該檔案，就保留，否則可刪 -->
-    <!-- <link href="styles.css" rel="stylesheet" /> -->
+    <!-- 自訂 CSS：強制網頁最小寬度 (等於 desktop) -->
+    <style>
+      body {
+        /* 強制整個頁面寬度至少 1200px，如果螢幕小於 1200 就自動出現橫向捲軸 */
+        min-width: 1200px;
+      }
+    </style>
   </head>
 
   <body>
@@ -46,9 +53,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#!">Home</a>
-            </li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
             <li class="nav-item dropdown">
               <a
@@ -85,7 +90,9 @@
       <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
           <h1 class="display-4 fw-bolder">Shop in style</h1>
-          <p class="lead fw-normal text-white-50 mb-0">With this shop homepage template</p>
+          <p class="lead fw-normal text-white-50 mb-0">
+            With this shop homepage template (Desktop only)
+          </p>
         </div>
       </div>
     </header>
@@ -93,15 +100,16 @@
     <!-- Section-->
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
-        <!-- row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 讓手機/平板/桌機自動分欄 -->
-        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-
+        <!-- 你可以保留 row-cols-*，但移除 RWD 後，手機會有橫向捲軸 -->
+        <div
+          class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center"
+        >
           <!-- Card 1 -->
           <div class="col mb-5">
             <div class="card h-100">
               <!-- Product image-->
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top"
                 src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
                 alt="..."
               />
@@ -133,7 +141,7 @@
               </div>
               <!-- Product image-->
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top"
                 src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
                 alt="..."
               />
@@ -141,7 +149,6 @@
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Special Item</h5>
-                  <!-- Product reviews-->
                   <div class="d-flex justify-content-center small text-warning mb-2">
                     <div class="bi-star-fill"></div>
                     <div class="bi-star-fill"></div>
@@ -149,7 +156,6 @@
                     <div class="bi-star-fill"></div>
                     <div class="bi-star-fill"></div>
                   </div>
-                  <!-- Product price-->
                   <span class="text-muted text-decoration-line-through">$20.00</span>
                   $18.00
                 </div>
@@ -166,20 +172,17 @@
           <!-- Card 3 -->
           <div class="col mb-5">
             <div class="card h-100">
-              <!-- Sale badge-->
               <div
                 class="badge bg-dark text-white position-absolute"
                 style="top: 0.5rem; right: 0.5rem"
               >
                 Sale
               </div>
-              <!-- Product image-->
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top"
                 src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
                 alt="..."
               />
-              <!-- Product details-->
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Sale Item</h5>
@@ -187,7 +190,6 @@
                   $25.00
                 </div>
               </div>
-              <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
@@ -199,17 +201,14 @@
           <!-- Card 4 -->
           <div class="col mb-5">
             <div class="card h-100">
-              <!-- Product image-->
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top"
                 src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
                 alt="..."
               />
-              <!-- Product details-->
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Popular Item</h5>
-                  <!-- Rating stars-->
                   <div class="d-flex justify-content-center small text-warning mb-2">
                     <div class="bi-star-fill"></div>
                     <div class="bi-star-fill"></div>
@@ -220,7 +219,6 @@
                   $40.00
                 </div>
               </div>
-              <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
@@ -239,7 +237,7 @@
                 Sale
               </div>
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top"
                 src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
                 alt="..."
               />
@@ -262,7 +260,7 @@
           <div class="col mb-5">
             <div class="card h-100">
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top"
                 src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
                 alt="..."
               />
@@ -290,7 +288,7 @@
                 Sale
               </div>
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top"
                 src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
                 alt="..."
               />
@@ -320,7 +318,7 @@
           <div class="col mb-5">
             <div class="card h-100">
               <img
-                class="card-img-top img-fluid"
+                class="card-img-top"
                 src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
                 alt="..."
               />
@@ -359,8 +357,6 @@
     </footer>
 
     <!-- Bootstrap JS (CDN) -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

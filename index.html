@@ -2,36 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- 務必有 viewport 讓 Bootstrap 在手機正確縮放 -->
+    <!-- 讓手機端能自動縮放 -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Shop Homepage - Start Bootstrap Template</title>
 
-    <!-- Favicon -->
+    <!-- Favicon (可自行調整檔名) -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <!-- 1) Bootstrap CSS (CDN) - 關鍵！ -->
+    <!-- (A) 引入 Bootstrap 5 核心 CSS (CDN) -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
-    <!-- 2) Bootstrap Icons (看你需不需要) -->
+    <!-- Bootstrap Icons (如果有需要 icon) -->
     <link 
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" 
       rel="stylesheet" 
     />
 
-    <!-- 3) 你的自訂 CSS (若有需要) -->
-    <!-- 若 styles.css 與 index.html 同層，就留這行 -->
+    <!-- (B) 你的自訂 CSS，包含你貼的那份 shop-homepage.css 內容 -->
+    <!-- 若 styles.css 與 index.html 同層，就用這行 -->
     <link href="styles.css" rel="stylesheet" />
-    <!-- 若你真的有一個 css/styles.css 子資料夾檔案，也留這行，否則可刪 -->
-    <link href="css/styles.css" rel="stylesheet" />
+    <!-- 如果你真的有一個 "css/styles.css" 子資料夾，也可以保留，否則刪掉 -->
+    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
   </head>
 
   <body>
-    <!-- Navigation-->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="#!">Start Bootstrap</a>
@@ -42,7 +41,8 @@
           data-bs-target="#navbarSupportedContent" 
           aria-controls="navbarSupportedContent" 
           aria-expanded="false" 
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -101,23 +101,24 @@
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
         <!-- 
-          row-cols-1  在超小螢幕(手機)顯示1欄
-          row-cols-sm-2 在寬度>=576px 顯示2欄
-          row-cols-md-3 在寬度>=768px 顯示3欄
-          row-cols-xl-4 在寬度>=1200px 顯示4欄
+          row-cols-1:   超小螢幕時 一列1個
+          row-cols-sm-2: 螢幕>=576px 時 一列2個
+          row-cols-md-3: 螢幕>=768px 時 一列3個
+          row-cols-xl-4: 螢幕>=1200px時 一列4個
         -->
         <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-          
-          <!-- 內容卡片 -->
+
+          <!-- Product card -->
           <div class="col mb-5">
             <div class="card h-100">
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+              <!-- Product image -->
+              <!-- 加上 img-fluid 避免爆寬 -->
+              <img 
+                class="card-img-top img-fluid" 
+                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" 
                 alt="..."
               />
-              <!-- Product details-->
+              <!-- Product details -->
               <div class="card-body p-4">
                 <div class="text-center">
                   <!-- Product name-->
@@ -126,66 +127,18 @@
                   $40.00 - $80.00
                 </div>
               </div>
-              <!-- Product actions-->
+              <!-- Product actions -->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >View options</a
-                  >
+                  <a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 以後面幾張卡片為例，示範bootstrap網格 -->
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Sale badge-->
-              <div
-                class="badge bg-dark text-white position-absolute"
-                style="top: 0.5rem; right: 0.5rem"
-              >
-                Sale
-              </div>
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Special Item</h5>
-                  <!-- Product reviews-->
-                  <div class="d-flex justify-content-center small text-warning mb-2">
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                  </div>
-                  <!-- Product price-->
-                  <span class="text-muted text-decoration-line-through"
-                    >$20.00</span
-                  >
-                  $18.00
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 其餘卡片（Sale Item, Popular Item...）結構相同，這裡省略 -->
-          <!-- ... -->
+          <!-- 其餘卡片同理，自己再複製貼上
+               記得每張 <img> 都加 class="img-fluid"
+               ... -->
 
         </div>
       </div>
@@ -200,12 +153,11 @@
       </div>
     </footer>
 
-    <!-- 4) Bootstrap JS (CDN) -->
+    <!-- (C) Bootstrap 5 JS (CDN) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
     </script>
-
-    <!-- 5) 你的 scripts.js (如需要) -->
+    <!-- (D) 你的 scripts.js (可自行加) -->
     <script src="scripts.js"></script>
   </body>
 </html>
